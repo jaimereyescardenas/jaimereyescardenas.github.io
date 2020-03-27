@@ -478,7 +478,7 @@ body * {
         z-index: 1;
         bottom: 100%;
         left: 50%;
-        margin-left: -175%;
+        margin-left: -30%;
         padding: 10%;
         opacity: 0;
         transition: opacity 1s;
@@ -488,7 +488,7 @@ body * {
         position: absolute;
         top: 100%;
         left: 50%;
-        margin-left: -5px;
+        margin-left: -45%;
         border-width: 5px;
         border-style: solid;
         border-color: grey transparent transparent transparent;
