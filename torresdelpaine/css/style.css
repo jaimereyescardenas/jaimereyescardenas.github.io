@@ -1,0 +1,500 @@
+/* --Propiedades comunes de toda la página-- */
+
+body {
+    background-color: white;
+    width: 98%;
+    margin: auto;
+}
+
+body * {
+    box-sizing: border-box;
+}
+
+#wrapper {
+    width: 100%;
+}
+
+
+/* --Encabezado-- */
+
+
+/* Logo principal */
+
+#logo img {
+    display: block;
+    margin-top: 3%;
+    margin-bottom: 3%;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+}
+
+
+/* Menús de navegación */
+
+#header ul {
+    list-style-type: none;
+    background-color: teal;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+#header li {
+    float: left;
+}
+
+#header li:hover {
+    background-color: rgb(20, 20, 165);
+}
+
+#header li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    text-decoration: none;
+    font-size: 1.5vw;
+}
+
+#nav li a {
+    padding: 15px;
+}
+
+
+/* --Sección principal de la página-- */
+
+#main {
+    background-color: aquamarine;
+}
+
+
+/* Título principal */
+
+#main h1 {
+    text-align: center;
+    font-size: 7vw;
+    margin: 0;
+    padding: 7% 5%;
+    color: white;
+    text-shadow: 3px 3px 5px black;
+}
+
+
+/* Video */
+
+#section1 {
+    width: 100%;
+    margin-bottom: 8%;
+}
+
+#section1 #video {
+    width: 70%;
+    display: block;
+    margin: auto;
+}
+
+#section1 .iframe-container {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%;
+}
+
+#section1 iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+/* Tamaño de secciones 2, 3 y 4 (info, imágenes y frase) */
+
+#section2,
+#section3,
+#section4 {
+    width: 100%;
+    overflow: auto;
+    margin: 3% 0;
+}
+
+
+/* Sección de info */
+
+.info {
+    width: 50%;
+    height: auto;
+    padding: 3%;
+    font-family: 'Times New Roman', Times, serif;
+    color: black;
+    text-shadow: 2px 2px 2px white;
+}
+
+.info h2 {
+    font-size: 4vw;
+}
+
+.info p {
+    font-size: 1.8vw;
+    text-align: justify;
+}
+
+.info p:nth-child(2) {
+    padding-bottom: 5%;
+}
+
+.info a {
+    background-color: white;
+    color: black;
+    font-weight: bold;
+    padding: 7px;
+    box-shadow: 2px 2px 2px black;
+}
+
+
+/* Sección de imágenes */
+
+.img {
+    width: 50%;
+    height: auto;
+    vertical-align: middle;
+}
+
+.img .img-container {
+    width: 95%;
+    height: auto;
+    margin: auto;
+    display: block;
+}
+
+.img picture img {
+    width: 100%;
+    height: auto;
+    border: 1px solid white;
+    box-shadow: 2px 2px 2px grey;
+}
+
+
+/* Frase */
+
+#section4 {
+    line-height: 25%;
+    height: 25%;
+    text-align: center;
+    margin-bottom: 0;
+    background-color: aqua;
+    background-image: linear-gradient(to bottom, aquamarine, aqua);
+}
+
+#section4 cite {
+    padding: 15%;
+    font-size: 6vw;
+    font-family: Geneva, Tahoma, sans-serif;
+    color: rgb(245, 245, 245);
+    text-shadow: 2px 2px 2px grey;
+    line-height: 1.5;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+
+/* --Pie de página-- */
+
+#footer {
+    width: 100%;
+    background-color: rgb(180, 180, 180);
+    background-image: linear-gradient(to bottom, rgb(180, 180, 180), white);
+}
+
+
+/* Secciones 5 y 6 (sabías que y contacto) */
+
+#section5,
+#section6 {
+    width: 50%;
+    float: left;
+    height: auto;
+    padding-bottom: 5%;
+}
+
+#section5 h4,
+#section6 h4 {
+    text-align: center;
+    font-size: 4vw;
+    text-decoration: underline;
+}
+
+#section5 p {
+    font-size: 1.8vw;
+    text-align: justify;
+    padding: 0 5%;
+    margin: 0;
+}
+
+#section6 ul {
+    list-style-type: none;
+    font-size: 1.8vw;
+    padding: 0 5%;
+}
+
+
+/* Sección 7 (logos finales) */
+
+#section7 {
+    width: 100%;
+    clear: left;
+    padding: 5% 15%;
+    background-color: white;
+}
+
+#section7 img {
+    display: inline-block;
+    width: 27%;
+    margin-left: 2.8%;
+    margin-right: 2.8%;
+}
+
+
+/* --Media Queries (para dar responsividad)-- */
+
+
+/* División para el encabezado (hasta 480px) */
+
+@media only screen and (max-width: 480px) {
+    #menu {
+        width: 100%;
+        height: auto;
+        float: left;
+    }
+    #menu>ul {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+    }
+    #menu>ul li {
+        width: 33.33%;
+        vertical-align: middle;
+    }
+    #header ul li a {
+        padding: 10%;
+        font-size: 4vw;
+    }
+    #logo {
+        width: 100%;
+        float: left;
+    }
+    #logo img {
+        width: 60%;
+    }
+    #nav>ul {
+        width: 100%;
+    }
+    #nav>ul li {
+        width: 25%;
+    }
+    #nav>ul li a {
+        vertical-align: middle;
+    }
+    #container {
+        clear: left;
+    }
+}
+
+
+/* División para la posición del menú principal (a partir de 481px) */
+
+@media (min-width: 481px) {
+    #header {
+        position: relative;
+    }
+    #menu>ul {
+        position: absolute;
+        right: 0px;
+        margin-right: 0;
+        margin-top: 0;
+    }
+}
+
+
+/* División para los logos finales (hasta 550px) */
+
+@media only screen and (max-width: 550px) {
+    #section7 {
+        padding: 5% 0;
+    }
+    #section7 img {
+        float: left;
+        width: 50%;
+        padding: 3%;
+        margin: 0;
+    }
+    #section7 img:nth-child(3) {
+        float: none;
+        clear: left;
+        margin: 0 25%;
+    }
+}
+
+
+/* División para la vista a una sola columna (hasta 600px) */
+
+@media only screen and (max-width: 600px) {
+    #main h1 {
+        font-size: 8vw;
+        text-shadow: 2px 2px 3px black;
+    }
+    #section1 #video {
+        width: 90%;
+    }
+    #section2,
+    #section3,
+    #section4 {
+        margin: 0;
+    }
+    .img,
+    .info {
+        width: 100%;
+        margin-top: 3%;
+        margin-bottom: 3%;
+    }
+    .info {
+        text-shadow: 1px 1px 1px white;
+    }
+    .info h2 {
+        font-size: 7vw;
+    }
+    .info p {
+        font-size: 3.8vw;
+    }
+    #section4 cite {
+        font-size: 8vw;
+    }
+    #section5,
+    #section6 {
+        width: 100%;
+        float: none;
+    }
+    #section5 {
+        padding-bottom: 0;
+    }
+    #section5 h4 {
+        padding-top: 10%;
+        margin-top: 0;
+    }
+    #section5 h4,
+    #section6 h4 {
+        font-size: 7vw;
+    }
+    #section5 p,
+    #section6 li {
+        font-size: 3.8vw;
+    }
+}
+
+
+/* División para tamaños de fuente más pequeños (entre 600px y 767px) */
+
+@media only screen and (min-width: 600px) and (max-width: 767px) {
+    #main h1 {
+        font-size: 275%;
+    }
+    .info h2 {
+        font-size: 120%;
+    }
+    .info p {
+        font-size: 80%;
+    }
+}
+
+
+/* Tooltip (usada en la sección de sabias que para mostrar el significado de la palabra "baqueano") */
+
+
+/* División para la tooltip (a partir de 601px) */
+
+@media (min-width: 601px) {
+    #section5 .tooltip {
+        position: relative;
+        display: inline-block;
+        border-bottom: 1px dotted black;
+        font-style: italic;
+    }
+    #section5 .tooltip .tooltiptext {
+        visibility: hidden;
+        width: 600%;
+        height: auto;
+        background-color: grey;
+        color: white;
+        text-shadow: 1px 1px 1px black;
+        text-align: justify;
+        border-radius: 6px;
+        padding: 15%;
+        position: absolute;
+        z-index: 1;
+        top: -240%;
+        left: 115%;
+        opacity: 0;
+        transition: opacity 1s;
+    }
+    #section5 .tooltip .tooltiptext::after {
+        content: " ";
+        position: absolute;
+        top: 50%;
+        right: 100%;
+        margin-top: -5px;
+        border-width: 5px;
+        border-style: solid;
+        border-color: transparent grey transparent transparent;
+    }
+    #section5 .tooltip:hover .tooltiptext {
+        visibility: visible;
+        opacity: 1;
+    }
+}
+
+
+/* División para la tooltip (hasta 600px) */
+
+@media only screen and (max-width: 600px) {
+    #section5 .tooltip {
+        position: relative;
+        display: inline-block;
+        border-bottom: 1px dotted black;
+        font-style: italic;
+    }
+    #section5 .tooltip .tooltiptext {
+        visibility: hidden;
+        width: 350%;
+        height: auto;
+        background-color: grey;
+        color: white;
+        text-shadow: 1px 1px 1px black;
+        text-align: justify;
+        border-radius: 6px;
+        position: absolute;
+        z-index: 1;
+        bottom: 100%;
+        left: 50%;
+        margin-left: -175%;
+        padding: 10%;
+        opacity: 0;
+        transition: opacity 1s;
+    }
+    #section5 .tooltip .tooltiptext::after {
+        content: " ";
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        margin-left: -5px;
+        border-width: 5px;
+        border-style: solid;
+        border-color: grey transparent transparent transparent;
+    }
+    #section5 .tooltip:hover .tooltiptext {
+        visibility: visible;
+        opacity: 1;
+    }
+}
